@@ -42,12 +42,19 @@
                             <label>Kategorie</label>
                             <config>
                                 <type>select</type>
-                                <renderType>selectCheckBox</renderType>
+                                <renderType>selectTree</renderType>
                                 <foreign_table>tx_yawavepublications_domain_model_category</foreign_table>
                                 <foreign_table_where>ORDER BY tx_yawavepublications_domain_model_category.name ASC
                                 </foreign_table_where>
+                                <treeConfig>
+                                    <parentField>parent</parentField>
+                                    <appearance>
+                                        <expandAll>true</expandAll>
+                                        <showHeader>true</showHeader>
+                                    </appearance>
+                                </treeConfig>
                             </config>
-
+                    
                         </TCEforms>
                     </settings.filter_by_categorie>
 
