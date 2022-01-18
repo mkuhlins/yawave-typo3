@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:yawave_publications/Resources/Private/Language/locallang_csh_tx_yawavepublications_domain_model_publication.xlf" date="2021-10-21T16:17:24Z" product-name="yawave_publications">
+		<header/>
+		<body>
+			<trans-unit id="ext_id.description" resname="ext_id.description">
+				<source>extId</source>
+			</trans-unit>
+			<trans-unit id="slug.description" resname="slug.description">
+				<source>slug</source>
+			</trans-unit>
+			<trans-unit id="type.description" resname="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="styles.description" resname="styles.description">
+				<source>styles</source>
+			</trans-unit>
+			<trans-unit id="header_content.description" resname="header_content.description">
+				<source>headerContent</source>
+			</trans-unit>
+			<trans-unit id="badge.description" resname="badge.description">
+				<source>badge</source>
+			</trans-unit>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="content.description" resname="content.description">
+				<source>content</source>
+			</trans-unit>
+			<trans-unit id="content_check_sum.description" resname="content_check_sum.description">
+				<source>contentCheckSum</source>
+			</trans-unit>
+			<trans-unit id="feature_image_check_sum.description" resname="feature_image_check_sum.description">
+				<source>featureImageCheckSum</source>
+			</trans-unit>
+			<trans-unit id="kpi_metrics.description" resname="kpi_metrics.description">
+				<source>kpiMetrics</source>
+			</trans-unit>
+			<trans-unit id="categories.description" resname="categories.description">
+				<source>categories</source>
+			</trans-unit>
+			<trans-unit id="cover.description" resname="cover.description">
+				<source>cover</source>
+			</trans-unit>
+			<trans-unit id="header.description" resname="header.description">
+				<source>header</source>
+			</trans-unit>
+			<trans-unit id="tags.description" resname="tags.description">
+				<source>tags</source>
+			</trans-unit>
+			<trans-unit id="portals.description" resname="portals.description">
+				<source>portals</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

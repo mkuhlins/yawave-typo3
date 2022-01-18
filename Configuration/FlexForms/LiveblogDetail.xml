@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Filter</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <!-- Output Sorting -->
+                    <settings.liveblog_output_sorting>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>Sortierung</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">Neuste zuerst</numIndex>
+                                        <numIndex index="1">new_first</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Älteste zuerst</numIndex>
+                                        <numIndex index="1">old_first</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+
+                        </TCEforms>
+                    </settings.liveblog_output_sorting>
+
+                    <!-- Set Liveblog our Output -->
+                    <settings.liveblog>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>Liveblog</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <foreign_table>tx_yawavepublications_domain_model_liveblogs</foreign_table>
+                                <foreign_table_where>ORDER BY tx_yawavepublications_domain_model_liveblogs.uid ASC</foreign_table_where>
+                            </config>
+
+                        </TCEforms>
+                    </settings.liveblog>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

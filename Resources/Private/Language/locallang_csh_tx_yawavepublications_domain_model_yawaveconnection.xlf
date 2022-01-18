@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:yawave_publications/Resources/Private/Language/locallang_csh_tx_yawavepublications_domain_model_yawaveconnection.xlf" date="2021-10-21T16:17:24Z" product-name="yawave_publications">
+		<header/>
+		<body>
+			<trans-unit id="ref_id.description" resname="ref_id.description">
+				<source>refId</source>
+			</trans-unit>
+			<trans-unit id="api_key.description" resname="api_key.description">
+				<source>apiKey</source>
+			</trans-unit>
+			<trans-unit id="api_secret.description" resname="api_secret.description">
+				<source>apiSecret</source>
+			</trans-unit>
+			<trans-unit id="application_id.description" resname="application_id.description">
+				<source>applicationId</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

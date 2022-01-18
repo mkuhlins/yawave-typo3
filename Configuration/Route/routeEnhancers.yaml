@@ -1,0 +1,17 @@
+routeEnhancers:
+  YawavePublicationDetails:
+    type: Extbase
+    limitToPages:
+      - 5
+    extension: YawavePublications
+    plugin: PublicationDetail
+    routes:
+      - routePath: '/details/{ref}'
+        _controller: 'Publication::detail'
+        _arguments:
+          ref: publication
+    aspects:
+      ref:
+        type: PersistedAliasMapper
+        tableName: tx_yawavepublications_domain_model_publication
+        routeFieldName: slug

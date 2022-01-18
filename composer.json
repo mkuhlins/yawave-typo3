@@ -1,0 +1,21 @@
+{
+    "name": "interspark/yawave-publications",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Hannes Pries",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Interspark\\YawavePublications\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "yawave_publications"
+        }
+    }
+}

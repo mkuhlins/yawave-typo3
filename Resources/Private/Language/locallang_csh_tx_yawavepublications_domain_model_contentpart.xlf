@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:yawave_publications/Resources/Private/Language/locallang_csh_tx_yawavepublications_domain_model_contentpart.xlf" date="2021-10-21T16:17:24Z" product-name="yawave_publications">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description" resname="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="focus_x.description" resname="focus_x.description">
+				<source>focusX</source>
+			</trans-unit>
+			<trans-unit id="focus_y.description" resname="focus_y.description">
+				<source>focusY</source>
+			</trans-unit>
+			<trans-unit id="checksum.description" resname="checksum.description">
+				<source>checksum</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

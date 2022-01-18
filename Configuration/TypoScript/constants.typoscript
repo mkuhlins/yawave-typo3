@@ -1,0 +1,14 @@
+plugin.tx_yawavepublications_webhook {
+    view {
+        # cat=plugin.tx_yawavepublications_webhook/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:yawave_publications/Resources/Private/Templates/
+        # cat=plugin.tx_yawavepublications_webhook/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:yawave_publications/Resources/Private/Partials/
+        # cat=plugin.tx_yawavepublications_webhook/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:yawave_publications/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_yawavepublications_webhook//a; type=string; label=Default storage PID
+        storagePid = 
+    }
+}

@@ -1,0 +1,93 @@
+<f:flashMessages />
+<f:if condition="{publication}">
+
+	
+	<h1>{publication.title}</h1>
+	
+	<f:if condition="{publication.headervideourl}">
+	
+		<f:then>
+			
+			<style type="text/css">
+			iframe {
+				width: 100%;
+				height: 450px;
+			}
+			</style>
+			
+			<f:format.raw>{publication.headervideourl}</f:format.raw>
+		
+		</f:then>
+		
+		<f:else>
+			
+			<f:if condition="{publication.header.image}">
+				<f:image image="{publication.header.image}" class="img-fluid" />
+			</f:if>
+			
+		</f:else>
+	
+	</f:if>
+		
+	
+	
+	<f:if condition="{publication.actiontools}">
+	
+	<hr />
+	
+	<div id='yawave-buttons'>
+		<f:for each="{publication.actiontools}" as="button" iteration="iterator">
+			<f:if condition="{button.type}=='LINK'">
+				<f:for each="{button.reference}" as="reference">
+					<a class='btn btn-default' href='{reference.linkUrl}' target='_blank'>
+						<i class='fad icons8-upload_share'></i>{button.label}</a>
+					</a>
+				</f:for>
+			</f:if>
+			<f:if condition="{button.type}=='SHARE'">
+				<button class='btn btn-default' onclick='YawaveSDK.handleButtonClick(this)' data-yawave-type='button' data-yawave-tool='share' data-yawave-publication='{publication.yawave_id}' data-yawave-id='{button.extId}' data-yawave-landing-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}" data-yawave-referral-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}">
+					<i class="fad icons8-upload_share"></i>{button.label}
+				</button>
+			</f:if>
+			<f:if condition="{button.type}=='FEEDBACK'">
+				<button class='btn btn-default' onclick='YawaveSDK.handleButtonClick(this)' data-yawave-type='button' data-yawave-tool='feedback'  data-yawave-publication='{publication.yawave_id}' data-yawave-id='{button.extId}' data-yawave-landing-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}" data-yawave-referral-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}">
+					<i class="fad icons8-upload_share"></i>{button.label}
+				</button>
+			</f:if>
+			<f:if condition="{button.type}=='SUBSCRIBE'">
+				<button class='btn btn-default' onclick='YawaveSDK.handleButtonClick(this)' data-yawave-type='button' data-yawave-tool='subscribe' data-yawave-publication='{publication.yawave_id}' data-yawave-id='{button.extId}' data-yawave-landing-url="{publication.siteDomain}{f:uri.action(action: 'show')}" data-yawave-referral-url="{publication.siteDomain}{f:uri.action(action: 'show')}">
+					<i class="fad icons8-upload_share"></i>{button.label}
+				</button>
+			</f:if>
+			<f:if condition="{button.type}=='FORM'">
+				<button class='btn btn-default' onclick='YawaveSDK.handleButtonClick(this)' data-yawave-type='button' data-yawave-tool='form' data-yawave-publication='{publication.yawave_id}' data-yawave-id='{button.extId}' data-yawave-landing-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}" data-yawave-referral-url="{publication.siteDomain}{f:uri.action(pageUid: settings.detailPid, action: 'detail'extId)}">
+					<i class="fad icons8-upload_share"></i>{button.label}
+				</button>
+			</f:if>
+			<f:if condition="{button.type}=='PAYMENT'">
+				<button class='btn btn-default' onclick='YawaveSDK.handleButtonClick(this)' data-yawave-type='button'  data-yawave-tool='payment' data-yawave-publication='{publication.yawave_id}' data-yawave-id='{button.extId}' >
+					<i class="fad icons8-upload_share"></i>{button.label}
+				</button>
+			</f:if>
+		</f:for>
+	</div>
+	
+	<hr />
+	
+	</f:if>
+	
+	<div class="content">
+		<f:format.htmlentitiesDecode>{publication.content}</f:format.htmlentitiesDecode>
+	</div>
+	
+	<script>
+		(function (d, s, id) {
+			var js, yjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "https://app.<f:format.raw>{publication.apiDomain}</f:format.raw>/sdk/init?lang=<f:format.raw>{publication.currentlanguage}</f:format.raw>&appId=<f:format.raw>{publication.appId}</f:format.raw>";
+			yjs.parentNode.insertBefore(js, yjs);
+		}(document, 'script', 'yawave-jssdk'));
+	</script>
+	
+</f:if>

@@ -1,0 +1,30 @@
+webhook = PAGE
+webhook {
+  typeNum = 1632820016
+  config {
+    debug = 0
+    no_cache = 1
+    disableAllHeaderCode = 1
+    admPanel = 0
+    additionalHeaders = Content-Type: application/json
+    disablePrefixComment = 1
+  }
+
+  10 = USER_INT
+  10 {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = YawavePublications
+    vendorName = Interspark
+    pluginName = Webhook
+    controller = PublicationController
+    action = push
+  }
+  
+}
+
+module.tx_YawaveConnection.view.templateRootPaths.10 = EXT/yawave_publications/Resources/Private/Templates/ 
+
+page = PAGE
+page {
+  includeCSS.yawave = EXT:yawave_publications/Resources/Public/Css/yawave.css
+}

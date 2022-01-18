@@ -1,0 +1,75 @@
+    
+   
+    
+    <f:form action="filter" name="filter_category_form">
+        
+        <div class="row">
+        
+            <div class="col-md-6">
+            
+            <select class="form-control" name="tx_yawavepublications_publicationsfilter[filter_category][]">
+                <option value="1">Blog</option>
+                <option value="9">Sportarten</option>
+                <option value="15">Teams</option>
+            </select>
+            
+            
+            
+            </div>
+            
+            <div class="col-md-6">
+                        
+                <select class="form-control" name="tx_yawavepublications_publicationsfilter[filter_category_or][]" multiple="">
+                    <option value="">Bitte auswählen....</option>
+                    <option value="14">Team 1</option>
+                    <option value="13">Team 2</option>
+                    <option value="12">Team 3</option>
+                    <option value="11">Team 4</option>
+                    <option value="10">Team 5</option>
+                </select>
+                
+                </div>
+        
+        </div>
+
+        <f:form.submit id="btn" class="btn btn-success btn-lg mt-3" value="Filtern" name="filter_action"/>
+
+    </f:form>
+    
+   
+
+    <hr/>
+
+
+<div class="row">
+
+    <f:if condition="{publications}">
+        <f:then>
+            <f:for each="{publications}" as="publication" iteration="iterator">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <f:if condition="{publication.cover.image}">
+                            <a href="/details/{publication.slug}" style="color: #000;">
+                                <f:image image="{publication.cover.image}" class="img-fluid"/>
+                            </a>
+                        </f:if>
+                        <div class="card-body">
+                            <a href="/details/{publication.slug}" style="color: #000;">
+                                <h5 class="card-title">{publication.cover.title}</h5>
+                            </a>
+                            <p class="card-text text-muted" style="height: 100px;">{publication.cover.description}</p>
+
+                            <div class="yawave-publication-list-date">{publication.beginDate}</div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </f:then>
+        <f:else>
+            <div class="col-md-12">Keine Publication gefunden.</div>
+        </f:else>
+    </f:if>
+
+</div>
+
+

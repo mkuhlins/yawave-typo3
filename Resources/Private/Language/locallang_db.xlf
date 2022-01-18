@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:yawave_publications/Resources/Private/Language/locallang_db.xlf" date="2021-10-21T16:17:24Z" product-name="yawave_publications">
+		<header/>
+		<body>
+			<trans-unit id="mlang_tabs_tab">
+				<source>Yawave</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication" resname="tx_yawavepublications_domain_model_publication">
+				<source>Publication</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.ext_id" resname="tx_yawavepublications_domain_model_publication.ext_id">
+				<source>Ext Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.slug" resname="tx_yawavepublications_domain_model_publication.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.type" resname="tx_yawavepublications_domain_model_publication.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.styles" resname="tx_yawavepublications_domain_model_publication.styles">
+				<source>Styles</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.header_content" resname="tx_yawavepublications_domain_model_publication.header_content">
+				<source>Header Content</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.badge" resname="tx_yawavepublications_domain_model_publication.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.title" resname="tx_yawavepublications_domain_model_publication.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.content" resname="tx_yawavepublications_domain_model_publication.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.content_check_sum" resname="tx_yawavepublications_domain_model_publication.content_check_sum">
+				<source>Content Check Sum</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.feature_image_check_sum" resname="tx_yawavepublications_domain_model_publication.feature_image_check_sum">
+				<source>Feature Image Check Sum</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.kpi_metrics" resname="tx_yawavepublications_domain_model_publication.kpi_metrics">
+				<source>Kpi Metrics</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.categories" resname="tx_yawavepublications_domain_model_publication.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.cover" resname="tx_yawavepublications_domain_model_publication.cover">
+				<source>Cover</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.header" resname="tx_yawavepublications_domain_model_publication.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.tags" resname="tx_yawavepublications_domain_model_publication.tags">
+				<source>Tags</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_publication.portals" resname="tx_yawavepublications_domain_model_publication.portals">
+				<source>Portals</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart" resname="tx_yawavepublications_domain_model_contentpart">
+				<source>Content Part</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.title" resname="tx_yawavepublications_domain_model_contentpart.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.description" resname="tx_yawavepublications_domain_model_contentpart.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.image" resname="tx_yawavepublications_domain_model_contentpart.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.focus_x" resname="tx_yawavepublications_domain_model_contentpart.focus_x">
+				<source>Focus X</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.focus_y" resname="tx_yawavepublications_domain_model_contentpart.focus_y">
+				<source>Focus Y</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_contentpart.checksum" resname="tx_yawavepublications_domain_model_contentpart.checksum">
+				<source>Checksum</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category" resname="tx_yawavepublications_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category.ext_id" resname="tx_yawavepublications_domain_model_category.ext_id">
+				<source>Ext Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category.name" resname="tx_yawavepublications_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category.slug" resname="tx_yawavepublications_domain_model_category.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category.used_as_interest" resname="tx_yawavepublications_domain_model_category.used_as_interest">
+				<source>Used As Interest</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_category.parent" resname="tx_yawavepublications_domain_model_category.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_tag" resname="tx_yawavepublications_domain_model_tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_tag.ext_id" resname="tx_yawavepublications_domain_model_tag.ext_id">
+				<source>Ext Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_tag.name" resname="tx_yawavepublications_domain_model_tag.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_tag.slug" resname="tx_yawavepublications_domain_model_tag.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_portal" resname="tx_yawavepublications_domain_model_portal">
+				<source>Portal</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_portal.ext_id" resname="tx_yawavepublications_domain_model_portal.ext_id">
+				<source>Ext Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_portal.title" resname="tx_yawavepublications_domain_model_portal.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_portal.description" resname="tx_yawavepublications_domain_model_portal.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_portal.header_image" resname="tx_yawavepublications_domain_model_portal.header_image">
+				<source>Header Image</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveconnection" resname="tx_yawavepublications_domain_model_yawaveconnection">
+				<source>Yawave Connection</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveconnection.ref_id" resname="tx_yawavepublications_domain_model_yawaveconnection.ref_id">
+				<source>Ref Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveconnection.api_key" resname="tx_yawavepublications_domain_model_yawaveconnection.api_key">
+				<source>Api Key</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveconnection.api_secret" resname="tx_yawavepublications_domain_model_yawaveconnection.api_secret">
+				<source>Api Secret</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveconnection.application_id" resname="tx_yawavepublications_domain_model_yawaveconnection.application_id">
+				<source>Application Id</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_actiontools" resname="tx_yawavepublications_domain_model_actiontools">
+				<source>Action-Tools</source>
+			</trans-unit>
+			<trans-unit id="tx_yawavepublications_domain_model_yawaveevent" resname="tx_yawavepublications_domain_model_yawaveevent">
+				<source>Events</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

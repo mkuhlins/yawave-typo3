@@ -1,0 +1,324 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:be.container
+   includeCssFiles="{
+	  0: '{f:uri.resource(path:\'Css/bootstrap.min.css\')}',	   
+	  1: '{f:uri.resource(path:\'Css/yawave-be.css\')}'
+	  }">
+<div class="p-5">
+	<div class="row mb-5">
+		<div class="col-md-1"><img alt="alt text" src="../typo3conf/ext/yawave_publications/Resources/Public/Img/yawave_logo.png" class="img-fluid" /></div>
+		<div class="col-md-10"><h1>Willkommen in der<br />Yawave Typo3 Extension</h1></div>
+	</div>
+	 
+	
+	<ul class="nav nav-tabs"role="tablist">
+	  <li role="presentation" class="active"><a href="#connection" aria-controls="connection" role="tab" data-toggle="tab">Connection</a></li>
+	  <li role="presentation"><a href="#languages" aria-controls="languages" role="tab" data-toggle="tab">Languages</a></li>
+	  <li role="presentation"><a href="#synced_content" aria-controls="synced_content" role="tab" data-toggle="tab">Synchronized content</a></li>
+	  <li role="presentation"><a href="#reset_database" aria-controls="reset_database" role="tab" data-toggle="tab">Reset database</a></li>
+	</ul>
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="connection">
+		  <div class="p-5">
+			  <div class="row">
+			  <div class="col-12">
+				  
+				  <p>Bevor Sie die Extension vollständig benutzen können, tragen Sie hier bitte ihre API Zugangsdaten ein.</p>
+				  
+				  <hr />
+				  
+				  <h2 class="pb-3">API-Zugangsdaten</h2>
+				  
+				  <div class="d-inline">
+					  <f:flashMessages />
+				  </div>
+				  
+				  <f:form action="saveSettings" enctype="multipart/form-data" name="settings" object="{settings}">
+					  
+					  <div class="form-group pb-3">
+							<label>Api URL</label>
+							<f:form.select name="apiUrl" property="apiUrl" class="form-control" options="{prod: 'Yawave Prod', dev: 'Yawave Dev/Test'}" />
+						</div>
+						
+						<hr />
+					  
+					  <div class="form-group pb-3">
+						  <label>Client-ID</label>
+						  <f:form.textfield class="form-control" name="apiKey" property="apiKey" placeholder="Client-ID" />
+					  </div>
+					  <div class="form-group pb-3">
+						  <label>Client-Secret</label>
+						  <f:form.textfield class="form-control" name="apiSecret" property="apiSecret" placeholder="Client-Secret" />
+					  </div>
+					
+					  <div class="form-group pb-3">
+						  <label>Webhook Key</label>
+						  <f:form.textfield class="form-control" name="refId" property="refId" placeholder="Webhook Key" />
+					  </div>
+					  <div class="form-group pb-3">
+						  <label>Application ID</label>
+						  <f:form.textfield class="form-control" name="applicationId" property="applicationId" placeholder="Application ID" />
+					  </div>
+						
+						<hr />
+						
+					<div class="form-group pb-3">
+						<label>Publication Details Page ID</label>
+						<f:form.textfield class="form-control" name="publicationDetailsPageUid" property="publicationDetailsPageUid" placeholder="Publication Details Page ID" />
+					</div>
+						  
+					<hr />
+						  
+					<div class="form-group pb-3">
+						<label>Storage PID</label>
+						<f:form.textfield class="form-control" name="yawaveStoragePid" property="yawaveStoragePid" placeholder="Storgae PID" />
+					</div>
+					
+					<hr />
+						  
+					<div class="form-group pb-3">
+						<label>Realm Name</label>
+						<f:form.textfield class="form-control" name="apiSsoKey" property="apiSsoKey" placeholder="API Realm Name" />
+					</div>
+					  
+					<hr />
+					  
+					  <f:form.submit id="btn" class="btn btn-success btn-lg mt-3" value="Speichern" name="Save"/>
+				  </f:form>
+				  
+				  </div>
+				  
+			  </div>
+		  
+		  </div>
+		  
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="synced_content">
+		  
+		  <div class="p-5">
+			  
+			  <div class="panel panel-default mb-5">
+				<div class="panel-body">
+					<h3>Publikationen</h3>
+					
+					<table class="table">
+						<tr>
+							<th>UID</th>
+							<th>Name</th>
+							<th>Yawave-ID</th>
+						</tr>
+						
+						<f:if condition="{publications}">
+							<f:then>
+								<f:for each="{publications}" as="publication" iteration="iterator">
+									
+									<tr>
+										<td>{publication.uid}</td>
+										<td>{publication.title}</td>
+										<td>{publication.extid}</td>
+									</tr>
+								</f:for>
+							</f:then>
+							<f:else>
+								<tr>
+									<td colspan="3">Keine Publikationen gefunden.</td>
+								</tr>
+							</f:else>
+						</f:if>
+						
+					</table>
+					
+				</div>
+			  </div>
+			  
+			  
+			  <div class="panel panel-default mb-5">
+				  <div class="panel-body">
+					  <h3>Portale</h3>
+					  
+					  <table class="table">
+						  <tr>
+							  <th>UID</th>
+							  <th>Name</th>
+							  <th>Yawave-ID</th>
+						  </tr>
+						  
+						  <f:if condition="{portals}">
+							  <f:then>
+								  <f:for each="{portals}" as="portal" iteration="iterator">
+									  
+									  <tr>
+										  <td>{portal.uid}</td>
+										  <td>{portal.title}</td>
+										  <td>{portal.extid}</td>
+									  </tr>
+								  </f:for>
+							  </f:then>
+							  <f:else>
+								  <tr>
+									  <td colspan="3">Keine Portale gefunden.</td>
+								  </tr>
+							  </f:else>
+						  </f:if>
+						  
+					  </table>
+					  
+				  </div>
+				</div>
+				
+				<div class="panel panel-default mb-5">
+				  <div class="panel-body">
+					  <h3>Kategorien</h3>
+						
+						<table class="table">
+							<tr>
+								<th>UID</th>
+								<th>Name</th>
+								<th>Slug</th>
+								<th>Yawave-ID</th>
+							</tr>
+							
+							<f:if condition="{categorys}">
+								<f:then>
+									<f:for each="{categorys}" as="category" iteration="iterator">
+										
+										<tr>
+											<td>{category.uid}</td>
+											<td>{category.name}</td>
+											<td>{category.slug}</td>
+											<td>{category.extid}</td>
+										</tr>
+									</f:for>
+								</f:then>
+								<f:else>
+									<tr>
+										<td colspan="3">Keine Kategorien gefunden.</td>
+									</tr>
+								</f:else>
+							</f:if>
+							
+						</table>
+					  
+				  </div>
+				</div>
+				
+				<div class="panel panel-default mb-5">
+					  <div class="panel-body">
+						  <h3>Tags</h3>
+						  
+						  <table class="table">
+							  <tr>
+								  <th>UID</th>
+								  <th>Name</th>
+								  <th>Slug</th>
+								  <th>Yawave-ID</th>
+							  </tr>
+							  
+							  <f:if condition="{tags}">
+								<f:then>
+									<f:for each="{tags}" as="tag" iteration="iterator">
+										
+										<tr>
+											<td>{tag.uid}</td>
+											  <td>{tag.name}</td>
+												<td>{tag.slug}</td>
+											<td>{tag.extid}</td>
+										</tr>
+									</f:for>
+								</f:then>
+								<f:else>
+									<tr>
+										<td colspan="3">Keine Tags gefunden.</td>
+									</tr>
+								</f:else>
+							</f:if>
+							  
+						  </table>
+						  
+					  </div>
+					</div>
+					
+				
+				
+				<div class="panel panel-default mb-5">
+					  <div class="panel-body">
+						  <h3>Liveblogs</h3>
+						  
+						  <table class="table">
+							  <tr>
+								  <th>UID</th>
+								  <th>Yawave-ID</th>
+								  <th>Titel</th>
+								  <th>Location</th>
+								  <th>Type</th>
+							  </tr>
+							  
+							  <f:if condition="{liveblogs}">
+								<f:then>
+									<f:for each="{liveblogs}" as="liveblog" iteration="iterator">
+										
+										<tr>
+											<td>{liveblog.uid}</td>
+											<td>{liveblog.extid}</td>
+											<td>{liveblog.title}</td>
+											<td>{liveblog.location}</td>
+											<td>{liveblog.type}</td>
+										</tr>
+									</f:for>
+								</f:then>
+								<f:else>
+									<tr>
+										<td colspan="3">Keine Tags gefunden.</td>
+									</tr>
+								</f:else>
+							</f:if>
+							  
+						  </table>
+						  
+					  </div>
+					</div>	
+		  
+	  </div>
+	  
+	 
+	  
+	</div>
+	
+	<div role="tabpanel" class="tab-pane" id="reset_database">
+		  
+		  <div class="p-5">
+			  
+			  <p class="text-error">Here you can clear all yawave tables. Please use this button only when you know what you do!</p>
+			  
+			  <f:form action="resetDatabase" enctype="multipart/form-data" name="resetDatabase">
+			  	<f:form.submit id="btn" class="btn btn-danger btn-lg mt-3" value="Reset database" name="reset"/>
+			  </f:form>
+			  
+			  <hr />
+			  
+			  <f:form action="resetPublications" enctype="multipart/form-data" name="resetPublications">
+			  	<f:form.submit id="btn" class="btn btn-danger btn-lg mt-3" value="Reset publications" name="reset"/>
+			  </f:form>
+			  
+		  </div>
+		  		  
+	  </div>
+	  
+	  <div role="tabpanel" class="tab-pane" id="languages">
+				
+			<div class="p-5">
+				
+				<p class="text-error">Auswählen welche Sprachen synchronisiert werden sollen</p>
+				
+				coming soon!
+				
+			</div>
+					  
+		</div>
+
+</div>
+
+
+</f:be.container>
+</html>

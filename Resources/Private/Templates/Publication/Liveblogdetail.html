@@ -1,0 +1,110 @@
+<h1>{liveblog.title}</h1>
+
+<f:if condition="{liveblog.description}"><p class="text-muted"><i>{liveblog.description}</i></p></f:if>
+
+<p><strong>Typ:</strong> {liveblog.type} - <strong>Standort:</strong> {liveblog.location} - <strong>Beginn:</strong> {liveblog.startDate}</p>
+
+<hr />
+
+<f:if condition="{liveblog.entrys}">
+	
+	<f:then>
+		
+		<f:for each="{entrys}" as="entry" iteration="iterator">
+		
+			<div class="row">
+				
+				<div class="col-1 text-right">
+					
+					<f:if condition="{entry.timeMinute} > 0">
+						<f:then>
+							<strong>{entry.timeMinute}'</strong><br />
+							<small>
+							<f:if condition="{entry.period} == FIRST">1.</f:if>
+							<f:if condition="{entry.period} == SECOND">2.</f:if>
+							<f:if condition="{entry.period} == THIRD">3.</f:if>
+							Drittel
+							</small>
+						</f:then>
+						<f:else>
+							<small class="text-muted"><f:format.date format="H:i d/m/Y">{entry.createdate}</f:format.date></small>
+						</f:else>
+					</f:if>
+				</div>
+				<div class="col-11">
+					<h3>{entry.title}</h3>
+					
+					<div id="liveblog"></div>
+					
+					<f:if condition="{entry.type} == 'SCORE_CHANGE'">
+					
+					<div class="mb-2">
+						<strong>{liveblog.homeCompetitor}</strong> <span class="badge badge-primary">{entry.homeScore}</span> : <span class="badge badge-primary">{entry.awayScore}</span> <strong>{liveblog.awayCompetitor}</strong> 
+					</div>
+					
+					</f:if>
+					
+					<f:if condition="{entry.playersArray}">
+						<ul>
+						<f:for each="{entry.playersArray}" as="players">
+							
+							<f:if condition="{players.name} != 'null null'">
+							
+								<f:if condition="{entry.type} == 'SCORE_CHANGE'">
+									<f:then>
+										<li>
+											{players.name}
+											<f:if condition="{players.type} == 'SCORER'"><span class="badge badge-primary">{players.type}</span></f:if>
+											<f:if condition="{players.type} == 'ASSIST'"><span class="badge badge-warning">{players.type}</span></f:if>
+										</li>
+									</f:then>
+									<f:else>
+										<li>{players.name}</li>
+									</f:else>
+								</f:if>
+							
+							</f:if>
+							
+						</f:for>
+						</ul>
+					</f:if>
+					
+					<f:if condition="{entry.postContent}">
+						<f:format.html>{entry.postContent}</f:format.html>		
+					</f:if>
+								
+				</div>
+				
+				<div class="col-12"><hr /></div>
+				
+			</div>
+			
+		</f:for>
+		
+		
+	
+	</f:then>
+
+<f:else>
+	<div class="col-md-12">Keine Einträge gefunden.</div>
+</f:else>
+
+</f:if>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+function append_new_box() {
+	
+	$.ajax({
+		url: '/?type=1632820017',
+		success: function(result) {
+			console.log(result);
+			$('#liveblog').append(result);
+		},
+	});
+	
+}
+
+</script>

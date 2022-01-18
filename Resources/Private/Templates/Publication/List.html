@@ -1,0 +1,75 @@
+    <f:form action="filter" name="filter_category_form">
+
+        <f:form.select name="filter_category" class="form-control" multiple="1">
+
+            <f:for each="{categories}" as="maincategories" iteration="iterator">
+
+                <f:if condition="{maincategories.uid}=={selected_filter}">
+                    <f:then>
+                        <f:form.select.option value="{maincategories.uid}" selected="selected">{maincategories.title}</f:form.select.option>
+                    </f:then>
+                    <f:else>
+                        <f:form.select.option value="{maincategories.uid}">{maincategories.title}</f:form.select.option>
+                    </f:else>
+                </f:if>
+
+                <f:if condition="{maincategories.parents}">
+
+                    <f:for each="{maincategories.parents}" as="parentcategories" iteration="iterator">
+
+                        <f:if condition="{parentcategories.uid}=={selected_filter}">
+                            <f:then>
+                                <f:form.select.option value="{parentcategories.uid}" selected="selected">- {parentcategories.title}</f:form.select.option>
+                            </f:then>
+                            <f:else>
+                                <f:form.select.option value="{parentcategories.uid}">- {parentcategories.title}</f:form.select.option>
+                            </f:else>
+                        </f:if>
+
+                    </f:for>
+
+                </f:if>
+
+            </f:for>
+
+        </f:form.select>
+
+        <f:form.submit id="btn" class="btn btn-success btn-lg mt-3" value="Filtern" name="filter_action"/>
+
+    </f:form>
+
+    <hr/>
+
+
+<div class="row">
+
+    <f:if condition="{publications}">
+        <f:then>
+            <f:for each="{publications}" as="publication" iteration="iterator">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <f:if condition="{publication.cover.image}">
+                            <a href="/details/{publication.slug}" style="color: #000;">
+                                <f:image image="{publication.cover.image}" class="img-fluid"/>
+                            </a>
+                        </f:if>
+                        <div class="card-body">
+                            <a href="/details/{publication.slug}" style="color: #000;">
+                                <h5 class="card-title">{publication.cover.title}</h5>
+                            </a>
+                            <p class="card-text text-muted" style="height: 100px;">{publication.cover.description}</p>
+
+                            <div class="yawave-publication-list-date">{publication.beginDate}</div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </f:then>
+        <f:else>
+            <div class="col-md-12">Keine Publication gefunden.</div>
+        </f:else>
+    </f:if>
+
+</div>
+
+

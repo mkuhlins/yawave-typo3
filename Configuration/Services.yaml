@@ -1,0 +1,11 @@
+# Configuration/Services.yaml
+# https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/DependencyInjection/Index.html
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Interspark\YawavePublications\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
