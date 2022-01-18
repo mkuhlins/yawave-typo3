@@ -1,7 +1,7 @@
 {
     "name": "yawave/typo3",
     "type": "typo3-cms-extension",
-    "description": "checkout to yawave_publications in your ext-folder in your Typo3 installation",
+    "description": "Get your Yawave Publciations dorect to your Typo3.",
     "license": "MIT",
     "authors": [
         {
