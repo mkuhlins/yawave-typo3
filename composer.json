@@ -1,10 +1,11 @@
 {
     "name": "yawave/typo3",
     "type": "typo3-cms-extension",
-    "description": "",
+    "description": "checkout to yawave_publications in your ext-folder in your Typo3 installation",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Hannes Pries",
+            "name": "Yawave Inc.",
             "role": "Developer"
         }
     ],
