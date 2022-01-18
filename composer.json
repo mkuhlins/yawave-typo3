@@ -1,7 +1,7 @@
 {
     "name": "yawave/typo3",
     "type": "typo3-cms-extension",
-    "description": "Get your Yawave Publciations dorect to your Typo3.",
+    "description": "Get your Yawave Publciations direct to your Typo3.",
     "license": "MIT",
     "authors": [
         {
